@@ -1,0 +1,173 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Curriculum360 | ASTU </title>
+		<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+		<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all">
+		<!-- web-font -->
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<!-- web-font -->
+		<!-- js -->
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/modernizr.custom.js' %}"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!-- js -->
+		<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+		<!-- start-smoth-scrolling -->
+	</head>
+	<body>
+		<!-- header -->
+		<div id="home" class="header-bg">
+			<div class="header-layer">
+				<div class="header-top">
+					<!-- container -->
+					<div class="container">
+						<div class="head-logo">
+							<a href="#"><img style="border-radius: 50%;" src="{% static 'images/logo_astu.png' %}" alt="" /></a>
+						</div>
+						<div class="top-nav">
+							<div class="nav-icon">
+								<a href="#" class="right_bt" id="activator"><span> </span> </a>
+							</div>
+							 <div class="box" id="box" style="top: -1000px;">
+								 <div class="box_content">        					                         
+									<div class="box_content_center">
+										<div class="form_content">
+											<div class="menu_box_list">
+												<ul>
+													<li><a href="#home" class="scroll"><span>home</span></a></li>
+													<li><a href="{% url 'login' %}" class="scroll"><span>Signin/signup</span></a></li>
+													
+												</ul>
+											</div>
+											<a class="boxclose" id="boxclose"> <span> </span></a>
+										</div>                                  
+									</div> 	
+								</div>  	  
+							</div>
+							<!-- start-click-drop-down-menu -->
+							<!-- start-dropdown -->
+							 <script type="text/javascript">
+								var $ = jQuery.noConflict();
+									$(function() {
+										$('#activator').click(function(){
+											$('#box').animate({'top':'0px'},900);
+										});
+										$('#boxclose').click(function(){
+										$('#box').animate({'top':'-1000px'},900);
+										});
+									});
+									$(document).ready(function(){
+									//Hide (Collapse) the toggle containers on load
+									$(".toggle_container").hide(); 
+									//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+									$(".trigger").click(function(){
+										$(this).toggleClass("active").next().slideToggle("500");
+											return false; //Prevent the browser jump to the link anchor
+									});
+														
+								});
+							</script>
+							<!-- //End-click-drop-down-menu -->
+							<!-- top-nav -->
+						</div>
+						<div class="clearfix"> </div>
+						<div class="head-info">
+							<h1>Curriculum360</h1>
+							<p> Are you struggling with getting info about ASTU Curriculum and cources?
+								this Website is built to give all you need to know about Courses, departments and curriculums given in ASTU
+							</p>
+							<div class="botton">
+								<a href="{% url 'login' %}">Get Started</a>
+							</div>
+						</div>
+					</div>
+					<!-- //container -->
+				</div>
+			</div>
+		</div>
+		<!-- //header -->
+		<!-- service -->
+		<div id="services" class="service">
+			<!-- container -->
+			<div class="container">
+				<div class="service-grids">
+					<div class="col-md-4 service-grid service-left">
+						<div class="creative"> </div>
+						<h3>Detailed Course Information</h3>
+						<p> Access comprehensive course details, including descriptions, prerequisites, credit hours, and more. Explore syllabi, lecture notes, assignments, and recommended resources to gain a deeper understanding of the courses you're interested in.
+						</p>
+					</div>
+					<div class="col-md-4 service-grid service-middle">
+						<div class="skills"> </div>
+						<h3>Resources and Support</h3>
+						<p>Access a wealth of resources to support your academic journey. From study materials and research opportunities to internship listings and career guidance, our system provides a centralized hub for accessing essential resources and support services.
+						</p>
+					</div>
+					<div class="col-md-4 service-grid service-right">
+						<div class="help"> </div>
+						<h3>Course Evaluations and Feedback</h3>
+						<p>Share your feedback and contribute to the continuous improvement of our courses. Provide evaluations and ratings for completed courses, helping future students make informed choices. Your feedback plays a crucial role in enhancing the quality of our academic offerings.
+						</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<!-- //container -->
+		</div>
+		
+		<div class="footer">
+			<!-- container -->
+			<div class="container">
+				<div class="footer-left">
+					<p>Developed by Dev Dyanasty @ASTU</p>
+				</div>
+				<div class="footer-right">
+					<ul>
+						<li><a href="#" class="facebook"> </a></li>
+						<li><a href="#" class="twitter"> </a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		<!-- //container -->
+		</div>
+		<!-- //footer -->
+		<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+									<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+	<!-- content-Get-in-touch -->
+	</body>
+</html>
