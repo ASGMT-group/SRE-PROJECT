@@ -9,13 +9,18 @@ from .forms import UserAddForm
 # Create your views here.
 def register_user(request):
     form = UserAddForm()
+    
     if request.method == 'POST':
+        
         form = UserAddForm(request.POST)
+        
         if form.is_valid():
-            user = form.save()
+            return redirect('login')
+            form.save()
             
-            messages.success(request , ("Succussfully Registerd !"))
-            return redirect('dashboard')
+            user = form.cleaned_data.get("username")
+            messages.success(request , ("Succussfully Registerd as" + user))
+            
     
     form = UserAddForm()
     
