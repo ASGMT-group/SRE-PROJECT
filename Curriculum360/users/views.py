@@ -8,21 +8,22 @@ from django.contrib.auth.forms import UserCreationForm
 from .forms import UserAddForm
 # Create your views here.
 def register_user(request):
-    form = UserAddForm()
-    
+ 
     if request.method == 'POST':
         form = UserAddForm(request.POST)
         if form.is_valid():
+            
             form.save()
             username = form.cleaned_data['username']
             password = form.cleaned_data['password1']
             user = username
             
-            messages.success(request , ("Succussfully Registerd as" + user))
+            user = form.cleaned_data.get("username")
+            messages.success(request , ("Succussfully Registerd as " + user))
             return redirect('login')
+        messages.success(request, ("Please check your form and try again \n Passwords must be similar and valid password,\n # 8 and more characters mixed with numbers is allowed"))
             
     else :
-        messages.success(request, ("something wrong please try again"))
         form = UserAddForm()
     
     return render (request, 'register_user.html' , {'form':form})
