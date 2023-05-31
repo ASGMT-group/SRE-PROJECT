@@ -11,18 +11,19 @@ def register_user(request):
     form = UserAddForm()
     
     if request.method == 'POST':
-        
         form = UserAddForm(request.POST)
-        
         if form.is_valid():
-            return redirect('login')
             form.save()
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
+            user = username
             
-            user = form.cleaned_data.get("username")
             messages.success(request , ("Succussfully Registerd as" + user))
+            return redirect('login')
             
-    
-    form = UserAddForm()
+    else :
+        messages.success(request, ("something wrong please try again"))
+        form = UserAddForm()
     
     return render (request, 'register_user.html' , {'form':form})
 def login_user(request):

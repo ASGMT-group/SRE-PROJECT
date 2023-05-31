@@ -6,6 +6,7 @@ class course(models.Model):
     course_code = models.CharField(max_length=15, null=True , blank=True)
     Description = models.TextField()
     likes = models.IntegerField()
+   # prerequest = models.ForeignKey(course, on_delete=model) 
 
     def __str__(self):
         return self.course_name
