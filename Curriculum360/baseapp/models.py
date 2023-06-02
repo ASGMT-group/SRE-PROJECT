@@ -2,15 +2,15 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser, User
 
 
-class User(User):
-    name = models.CharField(max_length=200, null=True)
+# class User(User):
+#     name = models.CharField(max_length=200, null=True)
    
-    bio = models.TextField(null=True)
+#     bio = models.TextField(null=True)
 
-    avatar = models.ImageField(null=True, default="avatar.svg")
+#     avatar = models.ImageField(null=True, default="avatar.svg")
 
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+#     USERNAME_FIELD = 'email'
+#     REQUIRED_FIELDS = []
 
 
 class Topic(models.Model):
