@@ -9,5 +9,8 @@ def  index(request):
 
 
 
-def dash(request):
+def home(request):
     return render(request,  'home.html')
+
+def dashbord(request):
+    return render(request, 'dashbord.html')

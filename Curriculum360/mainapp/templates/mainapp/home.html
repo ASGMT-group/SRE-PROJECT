@@ -16,146 +16,22 @@
 </head>
 <body>
     <!--nav bar-->
+    {% include 'navbar.html' %}
     
-    <div>
-        <nav class="navbar navbar-dark bg-dark navbar navbar-expand-lg navbar-light bg-ligh navbar" >
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Curriculum360</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">Dasboard</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">ASTU</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">Dasboard</a>
-                  </li>
-                 
-                </ul>
-                
-              </div>
-            </div>
-          </nav>
-    </div>
-    
-    <div>
-      {% if messages %}
-        {% for message in messages %}
-            
-            <div class="alert alert-warning alert-dismissible fade show" role="alert">
-              <strong>{{message}}</strong>
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        {% endfor %}
-      {% endif %}
-    </div>
-    <div class="container">
-      <div class="jumbotron">
-        <h1 class="display-4 text-center text-primary" >Welcome to Curriculum360!</h1>
-        <p class="lead">We're excited to help you with informations about courses in ASTU.</p>
-        <hr class="my-4">
-        <h3>We are not here to tell you about background of ASTU. But, you can get it <a href="https://www.astu.edu.et/about-us/background-of-astu"><button type="button" class="btn btn-info">Here.</button></a> </h3>
-      </div>
-      <div class="jumbotron" >
-        <hr> 
-        <br>
-        <h1 class="display-4">Curriculum Atructure of ASTU</h1>
-        <h2 class="">ASTU is atructured from division of fresh man and 5 schools.</h2>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Division of freshman</h5>
-              <p class="card-text">As name suggustes this division is dedicated to give freshma courses for 1st year students..</p>
+    <div  class="container">
+      <div>
+        <a href="{% url 'room' %}">studyroom</a>
+        {% if messages %}
+          {% for message in messages %}
               
-
-
-              <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                Learn more...
-              </a>
-              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Division of freshman</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <div>
-                    <p>
-                      Freshman Division Program (FDP) is organized as one of the academic wings to help first-year students to acclimatize to new academic environment so as to make the most of the exciting university experiences. The courses, offer in the first year, are intended to ample students’ knowledge, ensure a happy stay and fulfilling university study by enhancing their adaptation to new environment for a successful academic accomplishment.
-                    </p>
-                    <a href="https://www.astu.edu.et/academics/division/division-of-freshman-program">Read more...</a>
-                  </div>
-                  <div class="dropdown mt-3">
-                    <button type="button" class="btn btn-secondary"><a href="#" style="text-decoration: none; color: aliceblue;">Get Courses</a></button>
-                  </div>
-                </div>
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>{{message}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
               </div>
-
-
-
-
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">School of Civil Engineering and Architecture (SOCEA)</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
+          {% endfor %}
+        {% endif %}
       </div>
-      <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">School of Electrical Engineering & Computing (SOEEC)</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">School of Mechanical, Chemical & Materials Engineering (SoMCME)</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 mb-3 mb-sm-0">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">School of Applied Natural Science</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% include 'aboutschool.html' %}
     </div>
 </body>
 </html>
