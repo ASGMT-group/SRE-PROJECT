@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'mainapp',
     'users',
     'baseapp',
-  
+
     
    
   
@@ -147,5 +147,4 @@ TEMPLATES = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-#AUTH_USER_MODEL = "users_management.UserManage" 
-#AUTH_USER_MODEL = 'baseapp.User'
+
