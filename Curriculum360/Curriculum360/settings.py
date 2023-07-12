@@ -30,7 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mainapp',
     'users',
-    'baseapp',
+    'base',
+ 
 
     
    
@@ -129,6 +130,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'mainapp', 'templates', 'mainapp'),
+            os.path.join(BASE_DIR, 'mainapp', 'templates' , 'base'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
