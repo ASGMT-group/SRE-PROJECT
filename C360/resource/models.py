@@ -2,7 +2,7 @@ from django.db import models
 
 class resource(models.Model):
     name = models.CharField("Name", max_length=250)
-    file = models.FileField(upload_to="static/resource")
+    file = models.FileField(upload_to="resource/static/resource")
     description = models.TextField()
     rating = models.IntegerField()
 

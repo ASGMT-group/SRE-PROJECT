@@ -1,80 +1,148 @@
+{% extends 'main.html' %}
 <!DOCTYPE html>
+{% block content %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load static %}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/mycss.css' %}">
-    <title>Resource</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'resource/css/resource.css' %}">
+  <title>Resources</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">C360</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Resource</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Curriculums
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"></a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+  <div class="head">
+    <a id="eng" href="">Engineering / </a><a id="app" href=""> Applied</a>
+  </div>
+<!--freashman cources-->
+  <div class="fresh-con">
+    <h3 id="fresh-head">1st Year/Pre-Engineering</h3>
+    <div class="cources-con">
+      <div class="course-con">
+        <div class="c-name">Applied math I</div>
+        <div class="c-r-no">Resources(3)</div>
+        <div class="l-n-c">
+          <div class="l-n-c-l">
+            
+            <div><img id="icons" src="{% static 'resource/images/like.png' %}" alt=""></div>
+            <div><small> 5 likes</small></div>
+            
+          </div>
+          <div class="l-n-c-c">
+            
+            <div><img id="icons" src="{% static 'resource/images/comment.png' %}" alt=""></div>
+            <div><small>6 comments</small></div>
+            
           </div>
         </div>
-        </nav>
-        <section>
-            <div class="head">
-                <div>
-                    <h1>Freshman Courses</h1>
-                </div>
-                <div>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                      </label>
-                      <p>Applied/Preengineering</p>
-                </div>
+       
+      </div>
+      <div class="course-con">
+        
+      </div>
+      <div class="course-con">
+        
+      </div>
+      <div class="course-con">
+        
+      </div>
+      <div class="course-con">
+        
+      </div>
+    </div>
+  </div>
+<!--school cources-->
+<div class="head">
+  <a id="eng" href="">SOEEC / </a><a id="app" href=""> SOCEA /</a><a id="app" href=""> SOCME </a>
+</div>
+  <div class="fresh-con">
+    <h3 id="fresh-head">Shools
+    </h3>
+    <div class="cources-con">
+      <div class="course-con">
+        <div class="c-name">Applied math III</div>
+        <div class="c-r-no">Resources(3)</div>
+        <div class="l-n-c">
+          <div class="l-n-c-l">
+            
+            <div><img id="icons" src="{% static 'resource/images/like.png' %}" alt=""></div>
+            <div><small> 5 likes</small></div>
+            
+          </div>
+          <div class="l-n-c-c">
+            
+            <div><img id="icons" src="{% static 'resource/images/comment.png' %}" alt=""></div>
+            <div><small>6 comments</small></div>
+            
+          </div>
+        </div>
+       
+      </div>
+      <div class="course-con">
+        
+      </div>
+      <div class="course-con">
+        
+      </div>
+      <div class="course-con">
+        
+      </div>
+      <div class="course-con">
+        
+      </div>
+    </div>
+  </div>
+  
+  <!--department cources-->
+  <div class="head">
+    <div><h2 id="eng">Select your Department</h2></div>
+    <div>
+      <select id="myDropdown" name="myDropdown">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+    </div>
+
+  </div>
+    <div class="fresh-con">
+      <h3 id="fresh-head">Department
+      </h3>
+      <div class="cources-con">
+        <div class="course-con">
+          <div class="c-name">Applied math III</div>
+          <div class="c-r-no">Resources(3)</div>
+          <div class="l-n-c">
+            <div class="l-n-c-l">
+              
+              <div><img id="icons" src="{% static 'resource/images/like.png' %}" alt=""></div>
+              <div><small> 5 likes</small></div>
+              
             </div>
-            <div class="course-cont">
-                {% for course in courses %}
-                <a href="">
-                  <div class="card forc">
-                      <p class="heading">{{ course.name }}</p>
-                      <p class="heading">{{ course.description }}</p>
-                      <small>{{course.rating}}</small>
-                  </div>
-              </a>
-                {% endfor %}
-                
-                
-                
-                
-                
-                
+            <div class="l-n-c-c">
+              
+              <div><img id="icons" src="{% static 'resource/images/comment.png' %}" alt=""></div>
+              <div><small>6 comments</small></div>
+              
             </div>
-        </section>
+          </div>
+         
+        </div>
+        <div class="course-con">
+          
+        </div>
+        <div class="course-con">
+          
+        </div>
+        <div class="course-con">
+          
+        </div>
+        <div class="course-con">
+          
+        </div>
+      </div>
+    </div>
 </body>
+{% endblock %}
 </html>
